@@ -54,9 +54,6 @@ outglm.pax <- function(outcome,#outcome of interest
 pax_pasc_all =outglm.pax("PASC.any",study_data,
                          group="all",severity = TRUE)
 pax_pasc_all
-table(glm_dat_cleaned_norgan$severity, glm_dat_cleaned_norgan$age_group, glm_dat_cleaned_norgan$PASC.any)
-
-
 
 
 
