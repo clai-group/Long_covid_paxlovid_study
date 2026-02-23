@@ -1,8 +1,4 @@
 # Paxlovid and Post-Acute Sequelae of COVID-19 (PASC) Study
-
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.XXXXXXX.svg)](https://doi.org/10.5281/zenodo.XXXXXXX)
-
-
 ## Overview
 
 This repository contains the analysis code for the study:
