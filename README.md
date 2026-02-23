@@ -9,14 +9,7 @@ This repository contains the analysis code for the study:
 
 **"Organ-Specific Effects of Paxlovid on Post-Acute Sequelae of COVID-19 (PASC): A Retrospective Cohort Study"**
 
-### Abstract
-
-The impact of antiviral therapies, including Paxlovid, on post-acute sequelae of COVID-19 (PASC) remains inconclusive. We analyzed data from 19,413 patients (age > 18) from a validated PASC research cohort in New England who experienced at least one COVID-19 infection episode between January 1, 2022, and June 7, 2022, totaling 22,094 episodes. Multivariable logistic regression with inverse probability weights was used to infer the causal effects of Paxlovid treatment during acute infection on the risk of PASC overall (primary outcome), stratified by age group and organ system.
-
-Across all age groups, Paxlovid shows no statistically significant effect in lowering overall PASC risk. Stratification by organ system reveals a 37% reduction in gastrointestinal PASC (OR: 0.63; 95% CI: [0.468, 0.850]; p < 0.05) but a 97.4% increase in the risk of eye and ear-related PASC (OR: 1.974; 95% CI: [1.048, 3.718]; p < 0.05). Among patients aged 65 to 75 years who were not hospitalized, Paxlovid is associated with a 16.8% reduction in PASC risk (OR: 0.832; 95% CI: [0.7, 0.989]; p < 0.05).
-
-These findings highlight the complexity of antiviral therapy's long-term impact and underscore the need for further research to clarify the mechanisms underlying these outcomes.
-
+This repository contains analysis code for a retrospective cohort study examining the effects of Paxlovid on post-acute sequelae of COVID-19 (PASC). Using electronic health record data from a validated PASC research cohort in New England, we applied multivariable logistic regression with inverse probability weighting to estimate the causal effects of Paxlovid treatment during acute COVID-19 infection on subsequent PASC risk, stratified by age group and organ system.
 ## Repository Contents
 
 | File | Description |
