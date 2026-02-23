@@ -23,14 +23,13 @@ outglm.pax <- function(outcome,#outcome of interest
   
   if(all == T){
     if(severity == T){
-      dat.aoi <- dat.aoi %>% dplyr::select("vaccination_status_cat","variant","hispanic",
+      dat.aoi <- dat.aoi %>% dplyr::select("vaccination_status_cat","hispanic",
                                            "race","age","female","elixhauser_index","prior_infection",
-                                           "Paxlovid","Remdesivir","severity","Steroids", "age_group",
-                                           "timeFromVax","label")
-      W.out <- weightit(Paxlovid ~age+female+elixhauser_index + severity +race +hispanic +prior_infection +vaccination_status_cat  ,#vaccination_status_cat
+                                           "severity","label")
+      W.out <- weightit(Paxlovid ~age+female+elixhauser_index + severity +race +hispanic +prior_infection +vaccination_status_cat,
                         data = dat.aoi, estimand = "ATE" , method = "ebal")
     } else {
-      dat.aoi <- dat.aoi %>% dplyr::select("vaccination_status_cat","variant","hispanic","race","age","female","elixhauser_index","Paxlovid","Remdesivir","prior_infection","Steroids","timeFromVax","label")
+      dat.aoi <- dat.aoi %>% dplyr::select("vaccination_status_cat","hispanic", "race","age","female","elixhauser_index","prior_infection", "Steroids", "label")
       print("hi")
       W.out <- weightit(Paxlovid ~age+female+elixhauser_index  +race +hispanic +prior_infection +vaccination_status_cat +Steroids,
                         data = dat.aoi, estimand = "ATE" , method = "ebal")
@@ -51,9 +50,8 @@ outglm.pax <- function(outcome,#outcome of interest
   
 }
 
-pax_pasc_all =outglm.pax("PASC.any",study_data,
-                         group="all",severity = TRUE)
-pax_pasc_all
+pax_pasc_all =outglm.pax("PASC.any",study_data, group="all",severity = TRUE)
+
 
 
 
